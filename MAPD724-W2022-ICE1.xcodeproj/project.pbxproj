@@ -15,6 +15,14 @@
 		A348B433279D06E1001BF61F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A348B431279D06E1001BF61F /* Main.storyboard */; };
 		A348B435279D06E5001BF61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A348B434279D06E5001BF61F /* Assets.xcassets */; };
 		A348B438279D06E5001BF61F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A348B436279D06E5001BF61F /* LaunchScreen.storyboard */; };
+		A348B446279D2E37001BF61F /* images in Resources */ = {isa = PBXBuildFile; fileRef = A348B442279D2E37001BF61F /* images */; };
+		A348B447279D2E37001BF61F /* sprites in Resources */ = {isa = PBXBuildFile; fileRef = A348B443279D2E37001BF61F /* sprites */; };
+		A348B448279D2E37001BF61F /* audio in Resources */ = {isa = PBXBuildFile; fileRef = A348B444279D2E37001BF61F /* audio */; };
+		A348B449279D2E37001BF61F /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = A348B445279D2E37001BF61F /* fonts */; };
+		A348B44D279D3383001BF61F /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A348B44C279D3383001BF61F /* GameObject.swift */; };
+		A348B44F279D339C001BF61F /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A348B44E279D339C001BF61F /* GameProtocol.swift */; };
+		A348B451279D33DE001BF61F /* Ocean.swift in Sources */ = {isa = PBXBuildFile; fileRef = A348B450279D33DE001BF61F /* Ocean.swift */; };
+		A348B453279D33EE001BF61F /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = A348B452279D33EE001BF61F /* Plane.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +35,14 @@
 		A348B432279D06E1001BF61F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A348B434279D06E5001BF61F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A348B437279D06E5001BF61F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A348B442279D2E37001BF61F /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = ../../../../Downloads/Assets/images; sourceTree = "<group>"; };
+		A348B443279D2E37001BF61F /* sprites */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sprites; path = ../../../../Downloads/Assets/sprites; sourceTree = "<group>"; };
+		A348B444279D2E37001BF61F /* audio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = audio; path = ../../../../Downloads/Assets/audio; sourceTree = "<group>"; };
+		A348B445279D2E37001BF61F /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = ../../../../Downloads/Assets/fonts; sourceTree = "<group>"; };
+		A348B44C279D3383001BF61F /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
+		A348B44E279D339C001BF61F /* GameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
+		A348B450279D33DE001BF61F /* Ocean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ocean.swift; sourceTree = "<group>"; };
+		A348B452279D33EE001BF61F /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +59,8 @@
 		A348B41B279D06E0001BF61F = {
 			isa = PBXGroup;
 			children = (
+				A348B44B279D32C2001BF61F /* GameObjects */,
+				A348B44A279D3296001BF61F /* Core */,
 				A348B426279D06E1001BF61F /* MAPD724-W2022-ICE1 */,
 				A348B425279D06E1001BF61F /* Products */,
 			);
@@ -67,8 +85,38 @@
 				A348B431279D06E1001BF61F /* Main.storyboard */,
 				A348B434279D06E5001BF61F /* Assets.xcassets */,
 				A348B436279D06E5001BF61F /* LaunchScreen.storyboard */,
+				A348B441279D2DC3001BF61F /* Assets */,
 			);
 			path = "MAPD724-W2022-ICE1";
+			sourceTree = "<group>";
+		};
+		A348B441279D2DC3001BF61F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A348B444279D2E37001BF61F /* audio */,
+				A348B445279D2E37001BF61F /* fonts */,
+				A348B442279D2E37001BF61F /* images */,
+				A348B443279D2E37001BF61F /* sprites */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A348B44A279D3296001BF61F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A348B44C279D3383001BF61F /* GameObject.swift */,
+				A348B44E279D339C001BF61F /* GameProtocol.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A348B44B279D32C2001BF61F /* GameObjects */ = {
+			isa = PBXGroup;
+			children = (
+				A348B450279D33DE001BF61F /* Ocean.swift */,
+				A348B452279D33EE001BF61F /* Plane.swift */,
+			);
+			path = GameObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,11 +177,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A348B446279D2E37001BF61F /* images in Resources */,
 				A348B433279D06E1001BF61F /* Main.storyboard in Resources */,
 				A348B42A279D06E1001BF61F /* GameScene.sks in Resources */,
 				A348B435279D06E5001BF61F /* Assets.xcassets in Resources */,
+				A348B447279D2E37001BF61F /* sprites in Resources */,
 				A348B438279D06E5001BF61F /* LaunchScreen.storyboard in Resources */,
+				A348B449279D2E37001BF61F /* fonts in Resources */,
 				A348B42C279D06E1001BF61F /* Actions.sks in Resources */,
+				A348B448279D2E37001BF61F /* audio in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,9 +196,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A348B44D279D3383001BF61F /* GameObject.swift in Sources */,
+				A348B44F279D339C001BF61F /* GameProtocol.swift in Sources */,
 				A348B42E279D06E1001BF61F /* GameScene.swift in Sources */,
 				A348B430279D06E1001BF61F /* GameViewController.swift in Sources */,
+				A348B451279D33DE001BF61F /* Ocean.swift in Sources */,
 				A348B428279D06E1001BF61F /* AppDelegate.swift in Sources */,
+				A348B453279D33EE001BF61F /* Plane.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +368,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -340,7 +396,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
