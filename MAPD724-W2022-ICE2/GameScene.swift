@@ -83,5 +83,6 @@ class GameScene: SKScene
     {
         ocean?.Update()
         plane?.Update()
+        island?.Update() //island update
     }
 }
