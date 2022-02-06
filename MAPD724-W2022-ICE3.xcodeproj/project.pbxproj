@@ -25,10 +25,12 @@
 		A348B453279D33EE001BF61F /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = A348B452279D33EE001BF61F /* Plane.swift */; };
 		A3B2AE3727A6EFFF0001C85B /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B2AE3627A6EFFF0001C85B /* Island.swift */; };
 		A3B2AE3927A6F3AF0001C85B /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B2AE3827A6F3AF0001C85B /* Cloud.swift */; };
+		A3E26CA527AFD17B00CCB274 /* CollisionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E26CA427AFD17B00CCB274 /* CollisionManager.swift */; };
+		A3E26CA727AFD19700CCB274 /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E26CA627AFD19700CCB274 /* ScoreManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A348B424279D06E1001BF61F /* MAPD724-W2022-ICE2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MAPD724-W2022-ICE2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A348B424279D06E1001BF61F /* MAPD724-W2022-ICE3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MAPD724-W2022-ICE3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A348B427279D06E1001BF61F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A348B429279D06E1001BF61F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		A348B42B279D06E1001BF61F /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		A348B452279D33EE001BF61F /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		A3B2AE3627A6EFFF0001C85B /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 		A3B2AE3827A6F3AF0001C85B /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
+		A3E26CA427AFD17B00CCB274 /* CollisionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionManager.swift; sourceTree = "<group>"; };
+		A3E26CA627AFD19700CCB274 /* ScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +67,10 @@
 		A348B41B279D06E0001BF61F = {
 			isa = PBXGroup;
 			children = (
+				A3E26CA327AFD13500CCB274 /* Managers */,
 				A348B44B279D32C2001BF61F /* GameObjects */,
 				A348B44A279D3296001BF61F /* Core */,
-				A348B426279D06E1001BF61F /* MAPD724-W2022-ICE2 */,
+				A348B426279D06E1001BF61F /* MAPD724-W2022-ICE3 */,
 				A348B425279D06E1001BF61F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,12 +78,12 @@
 		A348B425279D06E1001BF61F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A348B424279D06E1001BF61F /* MAPD724-W2022-ICE2.app */,
+				A348B424279D06E1001BF61F /* MAPD724-W2022-ICE3.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A348B426279D06E1001BF61F /* MAPD724-W2022-ICE2 */ = {
+		A348B426279D06E1001BF61F /* MAPD724-W2022-ICE3 */ = {
 			isa = PBXGroup;
 			children = (
 				A348B427279D06E1001BF61F /* AppDelegate.swift */,
@@ -91,7 +96,7 @@
 				A348B436279D06E5001BF61F /* LaunchScreen.storyboard */,
 				A348B441279D2DC3001BF61F /* Assets */,
 			);
-			path = "MAPD724-W2022-ICE2";
+			path = "MAPD724-W2022-ICE3";
 			sourceTree = "<group>";
 		};
 		A348B441279D2DC3001BF61F /* Assets */ = {
@@ -125,12 +130,21 @@
 			path = GameObjects;
 			sourceTree = "<group>";
 		};
+		A3E26CA327AFD13500CCB274 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A3E26CA427AFD17B00CCB274 /* CollisionManager.swift */,
+				A3E26CA627AFD19700CCB274 /* ScoreManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A348B423279D06E1001BF61F /* MAPD724-W2022-ICE2 */ = {
+		A348B423279D06E1001BF61F /* MAPD724-W2022-ICE3 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A348B43B279D06E5001BF61F /* Build configuration list for PBXNativeTarget "MAPD724-W2022-ICE2" */;
+			buildConfigurationList = A348B43B279D06E5001BF61F /* Build configuration list for PBXNativeTarget "MAPD724-W2022-ICE3" */;
 			buildPhases = (
 				A348B420279D06E1001BF61F /* Sources */,
 				A348B421279D06E1001BF61F /* Frameworks */,
@@ -140,9 +154,9 @@
 			);
 			dependencies = (
 			);
-			name = "MAPD724-W2022-ICE2";
+			name = "MAPD724-W2022-ICE3";
 			productName = "MAPD724-W2022-ICE1";
-			productReference = A348B424279D06E1001BF61F /* MAPD724-W2022-ICE2.app */;
+			productReference = A348B424279D06E1001BF61F /* MAPD724-W2022-ICE3.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -160,7 +174,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A348B41F279D06E0001BF61F /* Build configuration list for PBXProject "MAPD724-W2022-ICE2" */;
+			buildConfigurationList = A348B41F279D06E0001BF61F /* Build configuration list for PBXProject "MAPD724-W2022-ICE3" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -173,7 +187,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A348B423279D06E1001BF61F /* MAPD724-W2022-ICE2 */,
+				A348B423279D06E1001BF61F /* MAPD724-W2022-ICE3 */,
 			);
 		};
 /* End PBXProject section */
@@ -204,12 +218,14 @@
 			files = (
 				A348B44D279D3383001BF61F /* GameObject.swift in Sources */,
 				A3B2AE3927A6F3AF0001C85B /* Cloud.swift in Sources */,
+				A3E26CA527AFD17B00CCB274 /* CollisionManager.swift in Sources */,
 				A348B44F279D339C001BF61F /* GameProtocol.swift in Sources */,
 				A3B2AE3727A6EFFF0001C85B /* Island.swift in Sources */,
 				A348B42E279D06E1001BF61F /* GameScene.swift in Sources */,
 				A348B430279D06E1001BF61F /* GameViewController.swift in Sources */,
 				A348B451279D33DE001BF61F /* Ocean.swift in Sources */,
 				A348B428279D06E1001BF61F /* AppDelegate.swift in Sources */,
+				A3E26CA727AFD19700CCB274 /* ScoreManager.swift in Sources */,
 				A348B453279D33EE001BF61F /* Plane.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +389,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.centennial.MAPD724-W2022-ICE2";
-				PRODUCT_NAME = "MAPD724-W2022-ICE2";
+				PRODUCT_NAME = "MAPD724-W2022-ICE3";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -401,7 +417,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.centennial.MAPD724-W2022-ICE2";
-				PRODUCT_NAME = "MAPD724-W2022-ICE2";
+				PRODUCT_NAME = "MAPD724-W2022-ICE3";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -411,7 +427,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A348B41F279D06E0001BF61F /* Build configuration list for PBXProject "MAPD724-W2022-ICE2" */ = {
+		A348B41F279D06E0001BF61F /* Build configuration list for PBXProject "MAPD724-W2022-ICE3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A348B439279D06E5001BF61F /* Debug */,
@@ -420,7 +436,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A348B43B279D06E5001BF61F /* Build configuration list for PBXNativeTarget "MAPD724-W2022-ICE2" */ = {
+		A348B43B279D06E5001BF61F /* Build configuration list for PBXNativeTarget "MAPD724-W2022-ICE3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A348B43C279D06E5001BF61F /* Debug */,

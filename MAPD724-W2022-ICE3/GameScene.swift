@@ -18,8 +18,8 @@ class GameScene: SKScene
 {
     // instance variables
     var ocean: Ocean?
-    var plane: Plane?
     var island: Island?
+    var plane: Plane?
     var clouds: [Cloud] = []
       
     override func didMove(to view: SKView)
@@ -34,14 +34,14 @@ class GameScene: SKScene
         ocean?.position = CGPoint(x: 0, y: 773)
         addChild(ocean!) // add the ocean to the scene
         
+        // add island to the scene
+        island = Island()
+        addChild(island!)
+        
         // add plane to the scene
         plane = Plane()
         plane?.position = CGPoint(x: 0, y: -495)
         addChild(plane!)
-        
-        // add island to the scene
-        island = Island()
-        addChild(island!)
         
         // add 3 clouds to the scene
         for index in 0...2
@@ -49,6 +49,27 @@ class GameScene: SKScene
             let cloud: Cloud = Cloud()
             clouds.append(cloud)
             addChild(clouds[index])
+        }
+        
+        // Sounds
+        let engineSound = SKAudioNode(fileNamed: "engine.mp3")
+        self.addChild(engineSound)
+        engineSound.autoplayLooped = true
+        
+        // preload / prewarm impulse
+        do{
+            let sounds:[String] = ["thunder", "yay"]
+            for sound in sounds
+            {
+                let path: String = Bundle.main.path(forResource: sound, ofType: "mp3")!
+                let url: URL = URL(fileURLWithPath: path)
+                let player: AVAudioPlayer = try AVAudioPlayer(contentsOf: url)
+                player.prepareToPlay()
+            }
+        }
+        catch
+        {
+            
         }
         
     }
@@ -91,13 +112,17 @@ class GameScene: SKScene
     override func update(_ currentTime: TimeInterval)
     {
         ocean?.Update()
+        island?.Update()
         plane?.Update()
-        island?.Update() //island update
         
         // update each cloud in clouds
         for cloud in clouds
         {
             cloud.Update()
+            CollisionManager.SquaredRadiusCheck(scene: self, object1: plane!, object2: cloud )
         }
+        
+        CollisionManager.SquaredRadiusCheck(scene: self, object1: plane!, object2: island!)
     }
 }
+
